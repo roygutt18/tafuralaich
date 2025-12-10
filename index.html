@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="תפור עליך — תפירה והתאמה אישית לבגדי נשים במידות גדולות" />
+    <title>תפור עליך</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="hamburgerBtn" id="hamburgerBtn">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#">דף בית</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#how">איך זה עובד</a></li>
+                <li><a href="#shop">חנות</a></li>
+                <li><a href="#reviews">ביקורות</a></li>
+                <li><a href="#contact">יצירת קשר</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="overlay" class="overlay"></div>
+
+    <section class="hero">
+        <div class="img-container">
+            <img src="woman-pointing.png" alt="">
+        </div>
+        <div>
+            <h1 class="heroTitle">בגדים שתפורים בדיוק עלייך!</h1>
+            <p class="heroP">בתפור עליך אנחנו מתמחים בתפירה בהתאמה אישית לנשים במידות גדולות. כל בגד נתפר בדיוק
+                לפי המידות, הסגנון והנוחות שלך — עם יחס אישי, בדים איכותיים וגימור מושלם</p>
+            <button class="contactUsBtn">יצירת קשר</button>
+            <button class="showShopBtn">צפי בחנות</button>
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="about-header">
+            <h2 class="sectionTitle">על החנות שלנו</h2>
+            <p class="aboutText">
+                בתפור עליך אנחנו מתמחים בתפירה בהתאמה אישית לנשים במידות גדולות. כל בגד נתפר בדיוק לפי המידות, הסגנון והנוחות שלך, עם יחס אישי, בדים איכותיים וגימור מושלם.
+            </p>
+        </div>
+        <div class="about-cards">
+            <div class="about-card">
+                <h3>התאמה אישית</h3>
+                <p>בגדים שמתאימים בדיוק לכל מידות הגוף שלך, נוחות וסגנון מובטחים.</p>
+            </div>
+            <div class="about-card">
+                <h3>בדים איכותיים</h3>
+                <p>שומרים על מגע רך ואיכות לאורך זמן, כדי שהבגד שלך יחזיק מעמד.</p>
+            </div>
+            <div class="about-card">
+                <h3>יחס אישי</h3>
+                <p>ייעוץ מקצועי מותאם אישית לכל לקוחה, כדי לקבל את התוצאה הטובה ביותר.</p>
+            </div>
+            <div class="about-card">
+                <h3>גימור מושלם</h3>
+                <p>תפירה מדויקת עם תשומת לב לכל פרט, כדי שהבגד יראה מושלם עלייך.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="timeline-section" id="howItWorks">
+
+      <div class="timeline-header">
+        <h2>איך זה עובד?</h2>
+        <!-- אין צורך בפסקה מתחת -->
+      </div>
+
+      <div class="timeline-container">
+
+        <div class="timeline-line"></div>
+
+        <!-- STEP 1 -->
+        <div class="timeline-item">
+          <div class="timeline-circle"><span>1</span></div>
+
+          <div class="timeline-content">
+            <h3>מדידה אישית</h3>
+            <p>נפגשים או שולחים את המידות שלך כדי להבין את הצרכים המדויקים של הגוף והסגנון שלך.</p>
+
+            <div class="tags">
+              <span class="tag black">מידות</span>
+              <span class="tag">התאמה אישית</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="timeline-item">
+          <div class="timeline-circle"><span>2</span></div>
+
+          <div class="timeline-content">
+            <h3>עיצוב בגדים מותאמים</h3>
+            <p>יצירת סקיצות ועיצובים מיוחדים לפי המידות והסגנון שלך, תוך שמירה על נוחות ומראה מחמיא.</p>
+
+            <div class="tags">
+              <span class="tag blue">סגנון</span>
+              <span class="tag orange">נוחות</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="timeline-item">
+          <div class="timeline-circle"><span>3</span></div>
+
+          <div class="timeline-content">
+            <h3>תפירה והכנה</h3>
+            <p>תפירה מקצועית של הבגדים לפי המידות, עם בד איכותי ואביזרים מותאמים.</p>
+
+            <div class="tags">
+              <span class="tag blue">בד איכותי</span>
+              <span class="tag red">דיוק</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="timeline-item">
+          <div class="timeline-circle"><span>4</span></div>
+
+          <div class="timeline-content">
+            <h3>מסירה והתאמות אחרונות</h3>
+            <p>את מקבלת את הבגדים, ואנחנו מבצעים התאמות אחרונות כדי שהבגד יושלם בצורה מושלמת עלייך.</p>
+
+            <div class="tags">
+              <span class="tag green">התאמות</span>
+              <span class="tag">מסירה</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+   
+      
+          
+
+    <section id="reviews" class="reviews">
+      <h2 class="sectionTitle">מה הלקוחות שלנו אומרים</h2>
+      <div class="reviews-container">
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">שירות מדהים! הבגד שלי מושלם ומדויק במידות, פשוט חוויה נהדרת.</p>
+          <span class="review-author">– מיכל ק.</span>
+        </div>
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">יחס אישי ומקצועי, כל שאלה נענתה מהר והבגד הגיע בזמן.</p>
+          <span class="review-author">– רותם ל.</span>
+        </div>
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">אני ממש מרוצה מהתוצאה, הגימור והבדים איכותיים מאוד.</p>
+          <span class="review-author">– סיון א.</span>
+        </div>
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">החוויה כולה הייתה נעימה ומקצועית. ממליצה בחום!</p>
+          <span class="review-author">– יעל מ.</span>
+        </div>
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">בגד מושלם, תואם בדיוק למה שדמיינתי. תודה רבה!</p>
+          <span class="review-author">– תמר ש.</span>
+        </div>
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">תפירה איכותית, יחס אישי ואהבה לכל פרט. חוויה נהדרת.</p>
+          <span class="review-author">– נועה ב.</span>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">צרי קשר</h2>
+            <p class="contact-text">מלאי את הפרטים ונחזור אלייך בהקדם</p>
+            <form class="contact-form">
+            <div class="form-group">
+                <label for="name">שם מלא</label>
+                <input type="text" id="name" name="name" placeholder="הכנס את שמך" required>
+            </div>
+            <div class="form-group">
+                <label for="email">אימייל</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">הודעה</label>
+                <textarea id="message" name="message" rows="5" placeholder="כתבי כאן את ההודעה שלך" required></textarea>
+            </div>
+            <button type="submit" class="submitBtn">שליחה</button>
+            </form>
+            <a href="https://wa.me/972542277574" target="_blank" class="whatsappBtn">
+            💬 שלחי לנו וואטסאפ
+            </a>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

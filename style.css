@@ -57,6 +57,7 @@ html, body {
   list-style: none;
   flex-direction: column;
   position: fixed;
+  justify-content: space-around;
   top: 0;
   left: -250px;
   width: 250px;
@@ -605,3 +606,4 @@ html, body {
     top: -5px;
   }
 }
+

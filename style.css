@@ -57,7 +57,6 @@ html, body {
   list-style: none;
   flex-direction: column;
   position: fixed;
-  justify-content: space-around;
   top: 0;
   left: -250px;
   width: 250px;
@@ -104,59 +103,112 @@ html, body {
   visibility: visible;
 }
 
+/* ========= פונט חם ונעים ========= */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@400;600;700&display=swap');
+
+body {
+  font-family: "Assistant", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fcf7ff;
+}
+
+/* ========= טיפוגרפיה ========= */
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 3.7rem;
+  font-weight: 700;
+  color: #3f1f55;
+  margin-bottom: 1.3rem;
+}
+
+p {
+  font-size: 1.35rem;
+  line-height: 2.2rem;
+  color: #5d4b6d;
+}
+
 /* =======================================================
-   HERO
+   HERO — רוחב מלא, גובה 85%
 ======================================================= */
+
 .hero {
-  text-align: center;
-  background: linear-gradient(to bottom right, #fef5ff, #f7e7ff);
+  width: 100%;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
+  padding: 0 6rem;
+  background: linear-gradient(120deg, #f7e8ff, #f2d9ff, #fcf5ff);
 }
+
+/* ========= תמונה — בלי כרטיסייה ========= */
+
 .img-container img {
-  width: 40vw;
+  width: 420px;
   height: auto;
+  border-radius: 0;
+  filter: drop-shadow(35px 35px 35px rgba(0,0,0,0.25));
 }
-.heroTitle {
-  font-size: 3.4rem;
-  margin-bottom: 1rem;
-  color: #333;
+
+/* ========= טקסט ========= */
+
+.hero-content {
+  max-width: 520px;
+  text-align: right;
+  direction: rtl;
 }
-.heroP {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
+
+/* =======================================================
+   BUTTONS — אפקטי hover מתקדמים כמו אצל שיר עוזיאל
+======================================================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
-.contactUsBtn,
-.showShopBtn {
-  padding: 13px 20px;
-  margin: 0 0.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 18px 42px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 14px;
   cursor: pointer;
-  transition: background 0.3s;
+  border: none;
+  transition: 0.35s ease;
+  letter-spacing: 0.3px;
 }
-.contactUsBtn {
-  background-color: #9900ff;
+
+/* כפתור ראשי — אלגנטי, זוהר, יוקרתי */
+.primaryBtn {
+  background: linear-gradient(90deg, #8c2aff, #b46cff);
   color: #fff;
-  transition: all 0.3s;
+  box-shadow: 0 10px 25px rgba(140, 0, 220, 0.3);
 }
-.contactUsBtn:hover {
-  background: rgb(98, 0, 151);
-  transform: scale(1.1);
+
+.primaryBtn:hover {
+  transform: translateY(-10px) scale(1.06);
+  box-shadow: 0 15px 40px rgba(140, 0, 220, 0.45);
+  filter: brightness(1.12);
 }
-.showShopBtn {
-  background-color: #f1daff55;
-  color: #a600ff;
-  border: 2px solid rgb(141, 0, 202);
-  transition: all 0.3s;
+
+/* כפתור שני —Border עדין + hover WOW */
+.secondaryBtn {
+  background: #ffffff;
+  border: 3px solid #8c2aff;
+  color: #7c20db;
+  box-shadow: 0 8px 22px rgba(120, 0, 200, 0.15);
 }
-.showShopBtn:hover {
-  background-color: #75009c;
-  color: #fff;
-  transform: scale(1.1);
+
+.secondaryBtn:hover {
+  background: #8c2aff;
+  color: white;
+  transform: translateY(-10px) scale(1.06);
+  box-shadow: 0 15px 40px rgba(120, 0, 200, 0.35);
 }
 
 /* =======================================================
@@ -316,12 +368,7 @@ html, body {
   z-index: 10;
   position: relative;
 
-  transition: 
-    background 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: all 0.3s ease;
 }
 
 /* Circle — active effect */
@@ -343,14 +390,10 @@ html, body {
 
   max-width: 450px;
   text-align: center;
-
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.4s ease;
 }
 
 /* SHOW card when circle is activated */
-.timeline-circle.filled + .timeline-content {
+.timeline-circle.filled{
   opacity: 1;
   transform: translateY(0);
 }
@@ -606,4 +649,3 @@ html, body {
     top: -5px;
   }
 }
-

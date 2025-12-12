@@ -138,7 +138,6 @@ p {
 
 .about {
   width: 100vw;
-  padding: 3rem;
   background: linear-gradient(145deg, #0b0013, #2d0050);
   box-shadow: 0 15px 40px rgba(0,0,0,0.45);
   color: #ffffff;
@@ -791,7 +790,6 @@ p {
   /* ABOUT */
   .about {
     padding: 2rem 1rem;
-    margin: 2rem 1rem;
   }
   .sectionTitle {
     font-size: 1.8rem;

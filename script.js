@@ -1,19 +1,3 @@
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const navMenu = document.getElementById('navMenu');
-const overlay = document.getElementById('overlay');
-
-hamburgerBtn.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  overlay.classList.toggle('active');
-});
-
-overlay.addEventListener('click', () => {
-  navMenu.classList.remove('active');
-  overlay.classList.remove('active');
-});
-
-
-
 const items1 = document.querySelectorAll(".timeline-item");
 const line = document.querySelector(".timeline-line");
 const circles = document.querySelectorAll(".timeline-circle");

@@ -13,105 +13,25 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  font-family: "Assistant", sans-serif;
+  width: 100%;
 }
 
 html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* =======================================================
-   NAVBAR
-======================================================= */
-.navbar {
-  background-color: transparent;
-  padding: 0.5rem 1rem;
-  position: fixed;
+section {
+  margin-top: 90px;
+  margin-bottom: 90px;
   width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-.nav-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Hamburger */
-.hamburgerBtn {
-  display: block;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  top: 10px;
-  left: 10px;
-  z-index: 1100;
-}
-
-/* =======================================================
-   SIDE NAV MENU
-======================================================= */
-.nav-menu {
-  list-style: none;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #fff;
-  padding-top: 4rem;
-  gap: 1rem;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-  transition: left 0.3s ease;
-  z-index: 1001;
-}
-.nav-menu.active {
-  left: 0;
-}
-.nav-menu li a {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  transition: background 0.3s;
-  text-align: center;
-}
-.nav-menu li a:hover {
-  background-color: #f0f0f0;
-}
-
-/* Overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 500;
-}
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
+  padding: 0px;
+  box-sizing: border-box
 }
 
 /* ========= פונט חם ונעים ========= */
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@400;600;700&display=swap');
-
-body {
-  font-family: "Assistant", sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fcf7ff;
-}
 
 /* ========= טיפוגרפיה ========= */
 
@@ -135,13 +55,14 @@ p {
 
 .hero {
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  padding: 0 6rem;
+  gap: 2rem;
+  padding: 0;
   background: linear-gradient(120deg, #f7e8ff, #f2d9ff, #fcf5ff);
+  margin-top: 0px;
 }
 
 /* ========= תמונה — בלי כרטיסייה ========= */
@@ -159,6 +80,7 @@ p {
   max-width: 520px;
   text-align: right;
   direction: rtl;
+  padding: 30px;
 }
 
 /* =======================================================
@@ -210,77 +132,145 @@ p {
   transform: translateY(-10px) scale(1.06);
   box-shadow: 0 15px 40px rgba(120, 0, 200, 0.35);
 }
-
 /* =======================================================
-   ABOUT SECTION
+   ABOUT SECTION – DARK PURPLE THEME
 ======================================================= */
+
 .about {
-  max-width: 1200px;
-  margin: 5rem auto;
-  padding: 3rem 2rem;
-  background-color: #fffdf8;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  color: #333333;
+  width: 100vw;
+  padding: 3rem;
+  background: linear-gradient(145deg, #0b0013, #2d0050);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+  color: #ffffff;
 }
+
+/* ===== TITLE WITH GRADIENT UNDERLINE ===== */
+.SectionTitle {
+  font-size: 3rem; /* יותר גדול */
+  font-weight: 900;
+  padding-bottom: 0.5rem;
+  color: #e8d4ff;
+  display: inline-block;
+  background-image: linear-gradient(to right, #c77dff, #7b2cbf);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
 .about-header {
   text-align: center;
-  margin-bottom: 2rem;
-}
-.sectionTitle {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #5a189a;
-  font-weight: 700;
-  border-bottom: 3px solid #9d4edd;
-  display: inline-block;
-  padding-bottom: 0.3rem;
-}
-.aboutText {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  max-width: 750px;
-  margin: 0 auto 2rem auto;
-  color: #222222;
+  margin-bottom: 3rem;
 }
 
-/* Cards */
+.aboutText {
+  max-width: 750px;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  color: #f3e9ff;
+}
+
+/* =======================================================
+   CARDS
+======================================================= */
+
 .about-cards {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  counter-reset: card;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .about-card {
-  background-color: #fcf9f5;
-  border-radius: 15px;
-  padding: 2rem 1.5rem;
-  text-align: left;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #1a0026;
+  width: 23%;
+  padding: 4.5rem 1.5rem 2rem;
+  border-radius: 25px;
   position: relative;
-  width: 300px;
-  height: 180px;
-  border: 1px solid rgb(200, 47, 200);
+  border: 2px solid #b26eff;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(148,65,255,0.35);
+  transition: .3s;
 }
+
 .about-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(90,24,154,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 14px 35px rgba(184,108,255,0.45);
 }
+
+/* ===== ICON ===== */
+.card-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(145deg, #c77dff, #8e35ff);
+  border-radius: 50%;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== CARD TITLES ===== */
 .about-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-  color: #5a189a;
-  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: .7rem;
+  color: #e9d4ff;
+  font-size: 1.6rem; /* כותרות כרטיסיות גדולות יותר */
+  font-weight: 800;
 }
+
 .about-card p {
+  color: #f0e4ff;
+  line-height: 1.6;
   font-size: 1rem;
-  line-height: 1.5;
-  color: #222222;
-  text-align: center;
 }
+
+/* =======================================================
+   RESPONSIVE – PHONE
+======================================================= */
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .SectionTitle {
+    font-size: 2.4rem;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .about-card {
+    width: 90%;
+    max-width: 380px;
+    padding: 5rem 1.7rem 2.5rem;
+    margin: 0 auto;
+  }
+
+  .card-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 36px;
+  }
+
+  .about-card h3 {
+    font-size: 1.8rem; /* הפרשי גודל משמעותיים יותר */
+  }
+
+  .aboutText {
+    font-size: 1.15rem;
+  }
+}
+
+
 
 /* ================================
    TIMELINE – NEW HORIZONTAL FLOW
@@ -412,6 +402,248 @@ p {
   color: #666;
 }
 
+.timeline-tag {
+  background-color: rgba(129, 0, 168, 0.295);
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  width: fit-content;
+  align-self: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+
+/* ============================================
+   WHY US – Premium Clean Section
+============================================ */
+
+.why-us-section {
+  padding: 130px 20px;
+  background: linear-gradient(170deg, #0b0014, #16002a 60%, #260042);
+  color: #fff;
+  overflow: hidden; /* ← מבטל גלילה לצדדים */
+}
+
+.why-wrapper {
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+/* TITLE */
+.why-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e8d4ff;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.why-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 160px;
+  height: 4px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #d08aff, #a44aff);
+  border-radius: 6px;
+}
+
+/* GRID */
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* CARD */
+.why-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 2.5rem 1.7rem;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  transition: 0.35s ease;
+  position: relative;
+  width: 28vw;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(174, 93, 255, 0.4);
+  border-color: #c67dff;
+}
+
+/* ICON */
+.why-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(140deg, #cd9aff, #a551ff);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+  box-shadow: 0 0 18px #c67dff80;
+}
+
+.why-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #e7ccff;
+}
+
+.why-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ead9ff;
+}
+
+/* MOBILE FIX */
+@media(max-width: 480px){
+  .why-title {
+    font-size: 2.4rem;
+  }
+  .why-card {
+    width: 80vw;
+  }
+  .why-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* =======================================================
+   REVIEWS – PREMIUM DESIGN
+======================================================= */
+
+.reviews {
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+  direction: rtl;
+}
+
+/* רקע דקורטיבי – עיגולים זוהרים */
+.reviews::before,
+.reviews::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #c27aff35, transparent 70%);
+  filter: blur(45px);
+  z-index: -1;
+}
+.reviews::before {
+  top: -130px;
+  right: -90px;
+}
+.reviews::after {
+  bottom: -140px;
+  left: -100px;
+}
+
+/* כותרת */
+.sectionTitle {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #5a189a;
+  margin-bottom: 3.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+/* קו זוהר מתחת */
+.sectionTitle::after {
+  content: "";
+  width: 140px;
+  height: 6px;
+  background: linear-gradient(90deg, #b15dff, #d78aff);
+  border-radius: 10px;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* גריד */
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2.4rem;
+}
+
+/* CARD */
+.review-card {
+  position: relative;
+  padding: 3rem 2rem 2.3rem;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #ffffff, #f4eaff);
+  border: 1px solid #e6d6ff;
+  box-shadow: 0 12px 34px rgba(90, 0, 150, 0.12);
+
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(120, 0, 200, 0.2);
+}
+
+/* ICON */
+.quote-icon {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  font-size: 2.8rem;
+  color: #c79aff;
+  opacity: 0.35;
+}
+
+/* TEXT */
+.review-text {
+  font-size: 1.15rem;
+  color: #4e3d5f;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* AUTHOR */
+.review-author {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #6e1fb4;
+  text-align: right;
+  display: block;
+}
+
+/* קו תחתון עדין */
+.review-card::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #b15dff, #d78aff);
+  border-radius: 3px;
+  display: block;
+  margin-top: 0.5rem;
+  margin-left: auto;
+}
+
+
 
 /* =======================================================
    CONTACT FORM
@@ -498,64 +730,6 @@ p {
 .whatsappBtn:hover {
   background-color: #1ebe5d;
   transform: translateY(-2px);
-}
-
-/* =======================================================
-   REVIEWS
-======================================================= */
-.reviews {
-  max-width: 1100px;
-  margin: 5rem auto;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-.reviews-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-.review-card {
-  position: relative;
-  background: linear-gradient(145deg, #fdf7ff, #f5ecff);
-  border-radius: 16px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.review-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(157, 78, 221, 0.25);
-}
-.quote-mark {
-  font-size: 4rem;
-  color: #9d4edd;
-  position: absolute;
-  top: -10px;
-  left: 15px;
-  opacity: 0.2;
-}
-.review-text {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  position: relative;
-  z-index: 1;
-}
-.review-author {
-  font-weight: 700;
-  color: #5a189a;
-  display: block;
-  text-align: right;
-}
-.review-card::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #9d4edd;
-  margin: 1rem 0 0 auto;
-  border-radius: 2px;
 }
 
 /* =======================================================
@@ -663,4 +837,22 @@ p {
     font-size: 3rem;
     top: -5px;
   }
+}
+
+
+.hero {
+  width: 100%;
+  max-width: 100%; /* מונע חריגה */
+  padding: 0 2rem; /* padding קטן יותר מבטיח התאמה */
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about {
+  width: 100%;
+  padding: 3rem; /* במקום 100vw */
+  box-sizing: border-box;
 }

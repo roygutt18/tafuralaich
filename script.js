@@ -79,3 +79,23 @@ function updateCart() {
   });
   cartTotalPrice.textContent = `₪${total.toFixed(2)}`;
 }
+
+
+const hamburger = document.getElementById('hamburger');
+const overlay = document.getElementById('menuOverlay');
+const menuLinks = document.querySelectorAll('.side-menu a');
+
+hamburger.addEventListener('click', () => {
+  document.body.classList.toggle('menu-open');
+});
+
+overlay.addEventListener('click', () => {
+  document.body.classList.remove('menu-open');
+});
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    document.body.classList.remove('menu-open');
+  });
+});
+

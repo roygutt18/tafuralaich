@@ -36,3 +36,46 @@ function updateTimeline() {
 
 window.addEventListener("scroll", updateTimeline);
 updateTimeline();
+
+
+
+const cartBtn = document.getElementById('cart-btn');
+const cartDiv = document.querySelector('.cart');
+const closeCart = document.getElementById('close-cart');
+const cartItems = document.getElementById('cart-items');
+const cartTotalPrice = document.getElementById('cart-total-price');
+
+let cart = [];
+
+cartBtn.addEventListener('click', () => {
+  cartDiv.style.display = cartDiv.style.display === 'flex' ? 'none' : 'flex';
+});
+
+closeCart.addEventListener('click', () => {
+  cartDiv.style.display = 'none';
+});
+
+/* דוגמה להוספת מוצר לעגלה */
+document.querySelectorAll('.details-btn').forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const productCard = btn.parentElement;
+    const name = productCard.querySelector('h2').textContent;
+    const priceText = productCard.querySelector('.price').textContent.replace('₪','');
+    const price = parseFloat(priceText);
+    cart.push({name, price});
+    updateCart();
+    alert(`${name} נוסף לעגלה`);
+  });
+});
+
+function updateCart() {
+  cartItems.innerHTML = '';
+  let total = 0;
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span>${item.name}</span><span>₪${item.price.toFixed(2)}</span>`;
+    cartItems.appendChild(li);
+    total += item.price;
+  });
+  cartTotalPrice.textContent = `₪${total.toFixed(2)}`;
+}

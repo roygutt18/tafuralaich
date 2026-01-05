@@ -340,6 +340,11 @@ h4 {
   .hero p {
     font-size: 1rem;
   }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
 }
 
 .about {
